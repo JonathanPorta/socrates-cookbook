@@ -14,7 +14,7 @@ before_deploy: make package
 deploy:
   provider: packagecloud
   username: "jonathanporta"
-  repository: "jonathanporta/socrates"
+  repository: "socrates"
   dist: "fedora/21"
   skip_cleanup: true
   token:
