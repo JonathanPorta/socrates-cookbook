@@ -6,5 +6,6 @@ description 'Installs/Configures socrates'
 long_description 'Installs/Configures socrates'
 version '0.0.1'
 
+depends 'packagecloud'
 depends 'porta_user'
 depends 'openssh'
