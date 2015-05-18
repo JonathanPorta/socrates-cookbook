@@ -1,10 +1,16 @@
 language: ruby
 rvm:
 - 2.2.1
-script: bundle exec rake travis
+install: gem install fpm package_cloud
+script: make test_ci
+after_success: make package_deploy
 addons:
   apt:
     sources:
     - chef-stable-precise
     packages:
     - chefdk
+    - rpm
+env:
+  global:
+    secure: J9HAgKCDCqYCR1wEEuYS9l2CQW8hc/mBh672wjMfZnH7S3ZjrpSQcLE75m1dWMaU4DMjeM/+UFtmsvpkmZhnXdBThAG8FyKzbofehxVYN8UQ2maHPEBRKdUxFO4qnWsseSOhfMW4ZOHDvBUeQH1ohGOLskpyji6FI49QIh3Jx/3JmytO0WweM/vmixKrTYBO0b481HfzKCnulJz9qLpEhka/ayl45908B4ClUk/jAFcyl/ewuFcWMrurjHqs7AtodtiVqA7AZbHabuxYfgKYkxlaHGM8KOgRCaabvVn7PxxaCIqDjiljVFpsGxTHq5Zu43UFtLbyaPn3310QUVFlY+4yUuktTPaQ0rp0epzm1y/rcybsf9RS09SOxlDENN2Ia4HSs3fdfP0Bp/dDQv0Y59zRC2KmjXpbS0Yj3fdpRqE+/iA1TXmrVBAbJzvs2rGzr8pnnNkX0+OolKpekTXbgJW9DDKy+QyijqEHvi42+OoR4d4SlUCfBpYMWA2ONTk8/hgRr4TZOTVqdVchlvGG93CkWOc4BbrelXj3scyfUuMXGw4DW2h58KnyZlauIf22wteiIgIvQ40KHXC7qcvAUzg5VUEyo27n/an9nr59eGxs4oCDkcnn0Ge5zEJh5Jo3cx9rxEV0hQUTGCpG450u9ieEYJ9X/H3Lrx3iUzj1DTw=
