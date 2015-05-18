@@ -3,7 +3,6 @@ rvm:
 - 2.2.1
 install: gem install fpm package_cloud
 script: make test_ci
-after_success: make package_deploy
 addons:
   apt:
     sources:
@@ -11,6 +10,10 @@ addons:
     packages:
     - chefdk
     - rpm
-env:
-  global:
-    secure: J9HAgKCDCqYCR1wEEuYS9l2CQW8hc/mBh672wjMfZnH7S3ZjrpSQcLE75m1dWMaU4DMjeM/+UFtmsvpkmZhnXdBThAG8FyKzbofehxVYN8UQ2maHPEBRKdUxFO4qnWsseSOhfMW4ZOHDvBUeQH1ohGOLskpyji6FI49QIh3Jx/3JmytO0WweM/vmixKrTYBO0b481HfzKCnulJz9qLpEhka/ayl45908B4ClUk/jAFcyl/ewuFcWMrurjHqs7AtodtiVqA7AZbHabuxYfgKYkxlaHGM8KOgRCaabvVn7PxxaCIqDjiljVFpsGxTHq5Zu43UFtLbyaPn3310QUVFlY+4yUuktTPaQ0rp0epzm1y/rcybsf9RS09SOxlDENN2Ia4HSs3fdfP0Bp/dDQv0Y59zRC2KmjXpbS0Yj3fdpRqE+/iA1TXmrVBAbJzvs2rGzr8pnnNkX0+OolKpekTXbgJW9DDKy+QyijqEHvi42+OoR4d4SlUCfBpYMWA2ONTk8/hgRr4TZOTVqdVchlvGG93CkWOc4BbrelXj3scyfUuMXGw4DW2h58KnyZlauIf22wteiIgIvQ40KHXC7qcvAUzg5VUEyo27n/an9nr59eGxs4oCDkcnn0Ge5zEJh5Jo3cx9rxEV0hQUTGCpG450u9ieEYJ9X/H3Lrx3iUzj1DTw=
+before_deploy: make package
+deploy:
+  provider: packagecloud
+  username: "jonathanporta/socrates"
+  skip_cleanup: true
+  token:
+    secure: KyZE2VU49Ymxk2VMNB2Ty4GGURDQ7jbvm8L0wSFjmgEQ1QLJFK6wuDqyayb9SG0VyZ7JzdSjAJAyP2KIgfmSYn7vZrEPFx4g1b1KYRPWT0StgPxXYoWcBsHx4l64EXo60sSBHZIi9JG49LUtKrOIZLsEFK/9rjBkUOkPdcLizfKDhn5rJQV1qWbbriaWcwHQN+Qjenb0e+9ss1fPUWsFU3Me3FS3jCHTfqgi8t+gnTce48vPO4qguBol7RWHTRSqU111DhkfDDzuA8xfHRupiJQ9D5CSLyOFh+iQIxQT6CDjMCGlukN+FidL1M46FcA2wylRe7012PeBpXlqBxs4XQdtyyp0f3myk7hucb5pbFQn+CGVZRXrEAPHLaWsvd+ePwlX0Vl1b1SjgMpjkRkaeETv1wJ3d60/Za5J5/+asnNXwEzH6jvvkgtQASFhMScp3P2H2I0uuz2p9GmDcD8rDnMKbGWlRySKkRRmkrUEMeFGTrupCDaYRhJnVE6YP1eTh56vXQsTMt39SKCPP9FMd39E3iPHuvzv2xxhslpp4spCv/NMqAU2yBsbph5Vwz6EV+GmiUjvafgJly6eP6Ric8mnLMP/w523P3uAY60XXPUC6PrGzoAuh11kmYtpKHg+eQ0UvoyMJfqRGMdcPTqrcgF3Um2GUKOaKAQVUFkG8HA=

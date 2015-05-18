@@ -18,6 +18,3 @@ test_lint_chef:
 package:
 	chef exec berks vendor cookbooks
 	bash package.sh
-
-package_deploy: package
-	package_cloud push jonathanporta/socrates
