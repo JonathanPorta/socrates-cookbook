@@ -1,30 +1,9 @@
-# socrates Cookbook
-TODO: Why in the hell does the cookbook exist?
+# Socrates Cookbook
+To bootstrap a machine and install this cookbook:
+        $ curl https://raw.githubusercontent.com/JonathanPorta/socrates-cookbook/master/install.sh | bash
 
-## Requirements
-TODO: What does the cookbook require to run?
-
-## Attributes
-* `['socrates']['attribute_name']` - TODO: What attributes does
-the cookbook define?
-
-## Recipes
-### default
-TODO: What does the default recipe do?
-
-## LWRPs
-### resource_name
-TODO: What are the resources provided by the cookbook?
-
-```
-socrates_resource_name "" do
-  action :do_something
-  ...
-end
-```
-
-## Usage
-TODO: How can the cookbook be used?
+To keep the machine converged:
+        $ ./autochef.sh
 
 ## Development and Contributing
 0. You'll need [bundler](http://github.com/carlhuda/bundler) and [chef-dk](https://github.com/chef/chef-dk).
