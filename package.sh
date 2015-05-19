@@ -19,4 +19,7 @@ fpm -s dir -t rpm \
     --description "${description}" \
     --prefix "$install_prefix" \
     cookbooks \
+    solo.json \
+    solo.rb \
+    autochef.sh \
     README.md
