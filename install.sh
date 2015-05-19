@@ -4,4 +4,5 @@ yum install -y https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/che
 curl https://packagecloud.io/install/repositories/jonathanporta/socrates/script.rpm.sh | bash
 yum install -y socrates
 
+
 chef-solo -c /opt/jonathanporta/socrates/solo.rb -o "recipe[socrates::autochef]"
