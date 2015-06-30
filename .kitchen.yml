@@ -1,10 +1,9 @@
 ---
 driver:
-  name: docker
-  use_sudo: false
+  name: vagrant
 
 provisioner:
-  name: chef_zero
+  name: chef_solo
 
 platforms:
   - name: fedora-21
@@ -13,4 +12,9 @@ suites:
   - name: default
     run_list:
       - recipe[socrates::default]
+    attributes:
+
+  - name: autochef
+    run_list:
+      - recipe[socrates::autochef]
     attributes:

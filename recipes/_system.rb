@@ -10,4 +10,4 @@ porta_user 'portaj' do
   github_username 'jonathanporta'
 end
 
-# include_recipe 'openssh'
+include_recipe 'openssh'
