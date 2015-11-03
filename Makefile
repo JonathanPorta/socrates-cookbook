@@ -18,3 +18,6 @@ test_lint_chef:
 package:
 	chef exec berks vendor cookbooks
 	bash package.sh
+
+watch:
+	chef exec rubocop
