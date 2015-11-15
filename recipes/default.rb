@@ -6,3 +6,4 @@
 
 include_recipe 'socrates::_system'
 include_recipe 'socrates::_samba'
+include_recipe 'socrates::_firewall'
