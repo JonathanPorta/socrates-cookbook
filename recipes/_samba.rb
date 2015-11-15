@@ -29,13 +29,13 @@ end
 
 # Configure the firewall to allow access to samba services
 firewall_rule 'smbd' do
-  port     [135,139,445]
+  port [135, 139, 445]
   protocol :tcp
-  command  :allow
+  command :allow
 end
 
 firewall_rule 'nmbd' do
-  port     [137,138]
+  port [137, 138]
   protocol :udp
-  command  :allow
+  command :allow
 end
