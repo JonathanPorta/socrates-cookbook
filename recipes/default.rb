@@ -6,4 +6,6 @@
 
 include_recipe 'socrates::_system'
 include_recipe 'socrates::_samba'
-include_recipe 'socrates::_firewall'
+
+# TODO: Figure out why the firewall cookbook doesn't seem to work.
+# include_recipe 'socrates::_firewall'
