@@ -14,6 +14,7 @@ end
 firewall_rule 'ssh' do
   port [22]
   command :allow
+  notifies :save, 'firewall[default]', :immediately
 end
 
 # Samba services
@@ -21,10 +22,12 @@ firewall_rule 'smbd' do
   port [135, 139, 445]
   protocol :tcp
   command :allow
+  notifies :save, 'firewall[default]', :immediately
 end
 
 firewall_rule 'nmbd' do
   port [137, 138]
   protocol :udp
   command :allow
+  notifies :save, 'firewall[default]', :immediately
 end
