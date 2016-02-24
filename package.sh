@@ -22,4 +22,5 @@ fpm -s dir -t rpm \
     solo.json \
     solo.rb \
     autochef.sh \
+    firewalld.sh \
     README.md
