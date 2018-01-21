@@ -1,7 +1,7 @@
-# Socrates Cookbook [![Build Status](https://travis-ci.org/JonathanPorta/socrates-cookbook.svg?branch=master)](https://travis-ci.org/JonathanPorta/socrates-cookbook)
+# Socrates Cookbook [![Build Status](https://travis-ci.org/jonathanporta/socrates-cookbook.svg?branch=master)](https://travis-ci.org/jonathanporta/socrates-cookbook)
 To bootstrap a machine and install this cookbook:
 
-        $ curl https://raw.githubusercontent.com/JonathanPorta/socrates-cookbook/master/install.sh | bash
+        $ curl https://raw.githubusercontent.com/jonathanporta/socrates-cookbook/master/install.sh | bash
 
 To keep the machine converged:
 

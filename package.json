@@ -1,9 +1,9 @@
 {
   "name": "socrates-cookbook",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Socrates Server Cookbook'",
-  "repository": "JonathanPorta/socrates-cookbook",
-  "homepage": "https://github.com/JonathanPorta/socrates-cookbook",
+  "repository": "jonathanporta/socrates-cookbook",
+  "homepage": "https://github.com/jonathanporta/socrates-cookbook",
   "author": "Jonathan Porta <jonathan@jonathanPorta.com>",
   "files": [
     "cookbooks",

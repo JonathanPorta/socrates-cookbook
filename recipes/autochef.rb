@@ -3,12 +3,22 @@
 # Recipe::autochef
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
+#
+# Cookbook Name::monitoring
+# Recipe::autochef
+#
+# Copyright (c) 2015 The Authors, All Rights Reserved.
 
-packagecloud_repo 'jonathanporta/socrates' do
-  type 'rpm'
-  metadata_expire '0'
+bash 'ops_tools' do
+  code <<-EOH
+    dnf install -y jq https://github.com/jonathanporta/ops/releases/download/0.0.4/ops-0.0.4-local.git860078f.x86_64.rpm
+    EOH
+  ignore_failure false
 end
 
-package 'socrates' do
-  action [:upgrade]
+bash 'socrates-cookbook' do
+  code <<-EOH
+    dnf install -y $(gh latest jonathanporta/socrates-cookbook --download-url)
+    EOH
+  ignore_failure false
 end

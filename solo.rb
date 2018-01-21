@@ -1,1 +1,1 @@
-cookbook_path '/opt/jonathanporta/socrates/cookbooks'
+cookbook_path '/opt/jonathanporta/socrates-cookbook/cookbooks'
