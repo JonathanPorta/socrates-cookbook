@@ -1,0 +1,17 @@
+{
+  "name": "socrates-cookbook",
+  "version": "0.1.0",
+  "description": "Socrates Server Cookbook'",
+  "repository": "JonathanPorta/socrates-cookbook",
+  "homepage": "https://github.com/JonathanPorta/socrates-cookbook",
+  "author": "Jonathan Porta <jonathan@jonathanPorta.com>",
+  "files": [
+    "cookbooks",
+    "solo.json",
+    "solo.rb",
+    "autochef.sh",
+    "firewalld.sh",
+    "install.sh",
+    "README.md"
+  ]
+}

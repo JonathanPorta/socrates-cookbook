@@ -1,3 +1,8 @@
+include ./ops/Makefile
+
+REPO_SLUG=$(shell cat ./package.json | jq -er .repository)
+VERSION=$(shell cat ./package.json | jq -er .version)
+
 test: test_spec	test_lint test_integration
 test_ci: test_spec test_lint
 
@@ -13,11 +18,10 @@ test_lint_ruby:
 	chef exec rubocop
 
 test_lint_chef:
-	chef exec foodcritic -f any .
+	chef exec foodcritic -t correctness,style .
 
-package:
+build:
 	chef exec berks vendor cookbooks
-	bash package.sh
 
 watch:
 	chef exec rubocop
