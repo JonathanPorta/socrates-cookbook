@@ -1,7 +1,14 @@
 #!/bin/bash
-yum install -y https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/chefdk-0.6.0-1.el6.x86_64.rpm
+echo 'Installing jq...'
+dnf install -y jq
 
-curl https://packagecloud.io/install/repositories/jonathanporta/socrates/script.rpm.sh | bash
-yum install -y socrates
+echo 'Starting install of ChefDk package...'
+dnf install -y https://packages.chef.io/stable/el/6/chef-12.11.18-1.el6.x86_64.rpm
+
+echo 'Starting install of JonathanPorta/ops package...'
+dnf install -y https://github.com/JonathanPorta/ops/releases/download/0.0.4/ops-0.0.4-local.git860078f.x86_64.rpm
+
+echo 'Starting install of JonathanPorta/socrates-cookbook package...'
+dnf install -y $(gh latest JonathanPorta/socrates-cookbook --download-url)
 
 chef-solo -c /opt/jonathanporta/socrates/solo.rb -o "recipe[socrates::autochef]"

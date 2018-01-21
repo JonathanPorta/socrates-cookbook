@@ -24,5 +24,5 @@ end
 
 # Notice that the service is named smb, NOT smbd. Carry on.
 service 'smb' do
-  action [:enable, :restart]
+  action %i[enable restart]
 end
